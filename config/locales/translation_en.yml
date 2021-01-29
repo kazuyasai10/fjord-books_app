@@ -1,11 +1,22 @@
-ja:
+en:
   activerecord:
     models:
-      book: 本  #g
+      book: BOOK  #g
 
     attributes:
       book:
-        author: 著者  #g
-        memo: メモ  #g
-        picture: 画像  #g
-        title: 題名  #g
+        author: AUTHOR  #g
+        memo: MEMO  #g
+        picture: PICTURE  #g
+        title: TITLE  #g
+        new_book: NEW BOOK
+
+  label:
+    new_book: NEW BOOK  
+
+  link:
+    New_address: NEW_ADDRESS
+    Show: SHOW
+    Edit: EDIT
+    Destroy: DESTROY
+    Back: BACK
