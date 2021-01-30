@@ -17,6 +17,6 @@ ja:
       user:
         id: ID
         email: メール  #g
-        postral_code: 郵便番号  #g
+        postal_code: 郵便番号  #g
         address: 住所  #g
         self_introduction: 自己紹介  #
