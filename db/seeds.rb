@@ -6,6 +6,14 @@ unless $stdin.gets.chomp == 'Y'
   return
 end
 
+User.destroy_all
+
+User.create!(email: 'aaa@aaa', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介')
+User.create!(email: 'bbb@bbb', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介')
+User.create!(email: 'ccc@ccc', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介')
+User.create!(email: 'ddd@ddd', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介')
+User.create!(email: 'eee@eee', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介')
+
 def picture_file(name)
   File.open(Rails.root.join("db/seeds/#{name}"))
 end
