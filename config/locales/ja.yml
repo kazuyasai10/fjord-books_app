@@ -217,6 +217,8 @@ ja:
       title_edit: "%{name}の編集"
       title_show: "%{name}の詳細"
       logout: "ログアウト"
+      login: "ログイン"
+      signup: "新規登録"
       edit_profile: "ユーザー情報の編集"
     pagination:
       first: '最初'
