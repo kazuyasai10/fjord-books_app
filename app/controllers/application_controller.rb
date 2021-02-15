@@ -13,9 +13,9 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     # サインアップ時にnameのストロングパラメータを追加
-    devise_parameter_sanitizer.permit(:sign_up, keys: %i[postral_code address self_introduction])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[postal_code address self_introduction])
     # アカウント編集の時にnameとprofileのストロングパラメータを追加
-    devise_parameter_sanitizer.permit(:account_update, keys: %i[postral_code address self_introduction])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[postal_code address self_introduction])
   end
 
   around_action :switch_locale
