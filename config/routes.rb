@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   resources :companies do
-    resources :users, only: [:index,:edit], module: "companies"
+    resources :users, only: [:index], module: "companies"
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
