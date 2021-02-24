@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class UsersController < ApplicationController
+class Companies::UsersController < ApplicationController
   def index
     redirect_to root_path unless current_user.company_admin?
     @company = Company.find(params[:company_id])

@@ -20,3 +20,11 @@ ja:
         postal_code: 郵便番号  #g
         address: 住所  #g
         self_introduction: 自己紹介  #
+
+    models:
+      company: 会社  #g
+
+    attributes:
+      company:
+        id: ID
+        name: 名前  #g

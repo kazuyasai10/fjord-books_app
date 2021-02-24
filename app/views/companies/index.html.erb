@@ -1,11 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Companies</h1>
+<h1><%= Company.model_name.human %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th><%= Company.human_attribute_name(:id) %></th>
+      <th><%= Company.human_attribute_name(:name) %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
