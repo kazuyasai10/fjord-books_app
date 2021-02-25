@@ -21,11 +21,7 @@ company_aaa.users.create!(email: 'ccc@aaa', password: 'password', postal_code: '
 company_bbb.users.create!(email: 'aaa@bbb', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介', company_admin: true)
 company_bbb.users.create!(email: 'bbb@bbb', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介')
 company_bbb.users.create!(email: 'ccc@bbb', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介')
-<<<<<<< HEAD
 company_eee.users.create!(email: 'eee@eee', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介')
-=======
-company_eee.users.create!(email: 'eee@eee', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介', company_id: 3)
->>>>>>> 203fa4a2d52753cefc9f8d832a2bc858eb8b296e
 company_admin.users.create!(email: 'admin@example.jp', password: 'password', admin: true)
 
 def picture_file(name)
