@@ -10,18 +10,19 @@ User.destroy_all
 Company.destroy_all
 
 
-Company.create!(name: "株式会社aaa")
-Company.create!(name: "bbb株式会社")
-Company.create!(name: "株式会社eee")
+company_aaa = Company.create!(name: "株式会社aaa")
+company_bbb = Company.create!(name: "bbb株式会社")
+company_eee = Company.create!(name: "株式会社eee")
+company_admin = Company.create!(name: "株式会社admin")
 
-User.create!(email: 'aaa@aaa', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介', company_admin: true, company_id: 1)
-User.create!(email: 'bbb@aaa', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介', company_id: 1)
-User.create!(email: 'ccc@aaa', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介', company_id: 1)
-User.create!(email: 'aaa@bbb', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介', company_admin: true, company_id: 2)
-User.create!(email: 'bbb@bbb', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介', company_id: 2)
-User.create!(email: 'ccc@bbb', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介', company_id: 2)
-User.create!(email: 'eee@eee', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介', company_id: 3)
-User.create!(email: 'admin@example.jp', password: 'password', admin: true,company_id: 1)
+company_aaa.users.create!(email: 'aaa@aaa', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介', company_admin: true)
+company_aaa.users.create!(email: 'bbb@aaa', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介')
+company_aaa.users.create!(email: 'ccc@aaa', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介')
+company_bbb.users.create!(email: 'aaa@bbb', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介', company_admin: true)
+company_bbb.users.create!(email: 'bbb@bbb', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介')
+company_bbb.users.create!(email: 'ccc@bbb', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介')
+company_eee.users.create!(email: 'eee@eee', password: 'password', postal_code: '111-111', address: 'tokyo', self_introduction: '自己紹介', company_id: 3)
+company_admin.users.create!(email: 'admin@example.jp', password: 'password', admin: true)
 
 def picture_file(name)
   File.open(Rails.root.join("db/seeds/#{name}"))
