@@ -2,11 +2,11 @@ Rails.application.routes.draw do
   root to: 'books#index'
   devise_for :users
   resources :books
-  resources :companies
   resources :users, only: [:index,:show]
 
   namespace :admin do
     resources :users, only: [:index,:edit]
+    resources :companies
   end
 
   resources :companies do
