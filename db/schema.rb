@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_19_030213) do
+ActiveRecord::Schema.define(version: 2021_03_01_061246) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2021_02_19_030213) do
     t.text "self_introduction"
     t.boolean "admin", default: false, null: false
     t.boolean "company_admin", default: false, null: false
-    t.integer "company_id", default: 0, null: false
+    t.integer "company_id", null: false
     t.index ["company_id"], name: "index_users_on_company_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
