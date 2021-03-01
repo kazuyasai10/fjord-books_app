@@ -2,9 +2,11 @@
 
 class Companies::UsersController < ApplicationController
   def index
-    redirect_to root_path unless current_user.company_admin?
     @company = Company.find(params[:company_id])
     @users = @company.users.order(:id).page(params[:page])
+    unless @company == current_user.company
+      raise ActiveRecord::RecordNotFound
+    end
   end
 
   def show
