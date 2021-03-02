@@ -19,7 +19,7 @@
     <% if current_user.admin? %>
     <%= link_to "ユーザー一覧", admin_users_path, class: 'navbar-link' %>
     <% elsif current_user.company_admin? %>
-    <%= link_to "組織ユーザー一覧", users_path, class: 'navbar-link' %>
+    <%= link_to "組織ユーザー一覧", company_users_path(current_user.company), class: 'navbar-link' %>
     <% end%>
     <% else %>
     <%= link_to t('views.common.signup'), new_user_registration_path, class: 'navbar-link'  %> |
