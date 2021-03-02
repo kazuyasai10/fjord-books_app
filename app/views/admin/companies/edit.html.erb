@@ -2,5 +2,5 @@
 
 <%= render 'form', company: @company %>
 
-<%= link_to t('views.common.show'), @company %> |
+<%= link_to t('views.common.show'), admin_company_path(@company) %> |
 <%= link_to t('views.common.back'), admin_companies_path %>
