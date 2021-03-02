@@ -17,30 +17,24 @@ class Admin::CompaniesController < Admin::ApplicationController
 
   def create
     @company = Company.new(company_params)
-    respond_to do |format|
       if @company.save
-        format.html { redirect_to admin_company_path(@company), notice: t('controllers.common.notice_create', name: Company.model_name.human) }
+        redirect_to admin_company_path(@company), notice: t('controllers.common.notice_create', name: Company.model_name.human)
       else
-        format.html { render :new }
+        render :new
       end
-    end
   end
 
   def update
-    respond_to do |format|
       if @company.update(company_params)
-        format.html { redirect_to admin_company_path(@company), notice: t('controllers.common.notice_update', name: Company.model_name.human) }
+        redirect_to admin_company_path(@company), notice: t('controllers.common.notice_update', name: Company.model_name.human)
       else
-        format.html { render :edit }
+        render :edit
       end
-    end
   end
 
   def destroy
     @company.destroy
-    respond_to do |format|
-      format.html { redirect_to admin_companies_url, notice: t('controllers.common.notice_destroy', name: Company.model_name.human) }
-    end
+      redirect_to admin_companies_url, notice: t('controllers.common.notice_destroy', name: Company.model_name.human)
   end
 
   private
