@@ -17,10 +17,9 @@ class Admin::CompaniesController < Admin::ApplicationController
 
   def create
     @company = Company.new(company_params)
-
     respond_to do |format|
       if @company.save
-        format.html { redirect_to @company, notice: 'Company was successfully created.' }
+        format.html { redirect_to admin_company_path(@company), notice: t('controllers.common.notice_create', name: Company.model_name.human) }
       else
         format.html { render :new }
       end
@@ -30,7 +29,7 @@ class Admin::CompaniesController < Admin::ApplicationController
   def update
     respond_to do |format|
       if @company.update(company_params)
-        format.html { redirect_to @company, notice: 'Company was successfully updated.' }
+        format.html { redirect_to admin_company_path(@company), notice: t('controllers.common.notice_update', name: Company.model_name.human) }
       else
         format.html { render :edit }
       end
@@ -40,7 +39,7 @@ class Admin::CompaniesController < Admin::ApplicationController
   def destroy
     @company.destroy
     respond_to do |format|
-      format.html { redirect_to admin_companies_url, notice: 'Company was successfully destroyed.' }
+      format.html { redirect_to admin_companies_url, notice: t('controllers.common.notice_destroy', name: Company.model_name.human) }
     end
   end
 
