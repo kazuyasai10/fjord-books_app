@@ -4,9 +4,7 @@ class Companies::UsersController < ApplicationController
   def index
     @company = Company.find(params[:company_id])
     @users = @company.users.order(:id).page(params[:page])
-    unless @company == current_user.company
-      raise ActiveRecord::RecordNotFound
-    end
+    raise ActiveRecord::RecordNotFound unless @company == current_user.company
   end
 
   def show
