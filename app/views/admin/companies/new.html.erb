@@ -1,0 +1,5 @@
+<h1><%= t('views.common.title_new', name: Company.model_name.human) %></h1>
+
+<%= render 'form', company: @company %>
+
+<%= link_to t('views.common.back'), admin_companies_path %>

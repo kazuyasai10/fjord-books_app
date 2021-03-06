@@ -1,0 +1,8 @@
+
+<p>
+  <strong><%= t('views.common.title_show', name: Company.model_name.human) %></strong>
+  <%= @company.name %>
+</p>
+
+<%= link_to t('views.common.edit'), edit_admin_company_path(@company) %> |
+<%= link_to t('views.common.back'), admin_companies_path %>

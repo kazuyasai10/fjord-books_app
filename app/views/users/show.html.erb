@@ -1,0 +1,10 @@
+<h1><%= t('views.common.title_show', name: User.model_name.human) %></h1>
+
+<h3><%= User.human_attribute_name(:email) %></h3>
+<%= @user.email %>
+<h3><%= User.human_attribute_name(:postal_code) %></h3>
+<%= @user.postal_code %>
+<h3><%= User.human_attribute_name(:address) %></h3>
+<%= @user.address %>
+<h3><%= User.human_attribute_name(:self_introduction) %></h3>
+<%= @user.self_introduction%>
