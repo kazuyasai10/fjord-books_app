@@ -45,7 +45,6 @@ group :development do
   gem 'rubocop-rails', require: false
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
-  gem 'dotenv-rails'
 end
 
 group :test do
@@ -54,7 +53,6 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
-  gem 'dotenv-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -63,6 +61,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'carrierwave'
 gem 'devise'
 gem 'devise-i18n'
+gem 'dotenv-rails', groups: %i[development test]
 gem 'kaminari'
 gem 'omniauth', '~> 1.9.1'
 gem 'omniauth-github'
